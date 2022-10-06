@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>{{ page.title | default(value=config.title) }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+  body {
+    background-color: #fbfbfb;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    max-width: 100ch;
+    margin: 1.5rem auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+</style>
+{% block content %} Error: Template has no content block. {% endblock %}
