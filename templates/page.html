@@ -16,4 +16,13 @@
 </style>
 <div class="main-menu"><a href="/">About</a></div>
 <h1 class="page-title">{{ page.title }}</h1>
-{{ page.content | safe }} {% endblock content %}
+{{ page.content | safe }}
+
+<hr>
+
+Written by <a href="/">Ben Hansen</a>.
+<a href="mailto:web@benhansen.io">Feedback</a> and
+<a href="https://github.com/benhansenslc/benhansen.io/blob/main/content/{{ page.relative_path }}">
+edit</a> suggestions are appreciated.
+
+{% endblock content %}

@@ -36,6 +36,7 @@ title = "Linux Directory Permissions"
   .term .output {
     white-space: pre;
     display: none;
+    overflow: scroll;
   }
 </style>
 
@@ -222,11 +223,11 @@ See how the following commands are handled when executed on a directory named `t
 ## More advanced permissions
 
 * Restricted Deletion (also called Sticky Bit) - For directories only lets the file and directory owner move or delete a file inside the directory. 
-* Set Group Identity (setgid) - For directories causes new files to be created with the same group as the directory rather than the group of the processes creating the file.
-* Set User Identity (setuid) - Ignored by Linux and most unix systems.
+* Set Group Identity (setgid) - For directories causes new files to be created with the same group as the directory rather than the group of the process creating the file.
+* Set User Identity (setuid) - Ignored by Linux and most Unix systems.
 
-## References
+<hr>
 
-<span id="ref1">1</span>: <a href="https://man7.org/linux/man-pages/man1/chmod.1.html">man 1 chmod</a> is the main source of this page's information.
+<span id="ref1">1</span>. The <a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod man page`</a> is the main source of this page's information.
 
-<span id="ref2">2</span>: See [this SO question](https://unix.stackexchange.com/a/149291/45680). I like the OPs analogy of "execute" allowing for the mapping to inode.
+<span id="ref2">2</span>. See [this SO question](https://unix.stackexchange.com/a/149291/45680). I like the OPs analogy of "execute" permitting access to inodes.

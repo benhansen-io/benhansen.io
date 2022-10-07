@@ -1,4 +1,4 @@
-# benhansen.io
+# [benhansen.io](https://www.benhansen.io)
 
 My personal site.
 
