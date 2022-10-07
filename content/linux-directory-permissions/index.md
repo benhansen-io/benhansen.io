@@ -228,6 +228,6 @@ See how the following commands are handled when executed on a directory named `t
 
 <hr>
 
-<span id="ref1">1</span>. The <a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod man page`</a> is the main source of this page's information.
+<span id="ref1">1</span>. The <a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod man page</a> is the main source of this page's information.
 
 <span id="ref2">2</span>. See [this SO question](https://unix.stackexchange.com/a/149291/45680). I like the OPs analogy of "execute" permitting access to inodes.
