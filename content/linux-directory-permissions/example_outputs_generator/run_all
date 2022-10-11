@@ -1,0 +1,11 @@
+#!/bin/bash
+set -eu
+
+cd "$(dirname "$0")"
+
+./generator
+
+
+cargo run --manifest-path processor/Cargo.toml > ../../../templates/shortcodes/linux_directory_permissions_commands.html
+
+rm -rf outputs

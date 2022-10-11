@@ -133,7 +133,7 @@ Or listed inversely:
       "cd" into the directory
     </td>
     <td>
-      <span class="read">Read</span>
+      <span class="execute">Execute</span>
     </td>
   </tr>
   <tr>
@@ -158,6 +158,14 @@ Or listed inversely:
     </td>
     <td>
       <span class="execute">Execute</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Remove the directory.
+    </td>
+    <td>
+      As with normal files, the permissions of the parent directory and not the directory itself determine if you can remove it. The directory must be empty.
     </td>
   </tr>
 </table>

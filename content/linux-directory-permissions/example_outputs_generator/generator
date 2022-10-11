@@ -1,24 +1,18 @@
 #!/bin/bash
-set eiu
-
-chmod u+rwx testdir
-rm -rf testdir
-mkdir testdir
-
-rm -rf outputs
-mkdir outputs
-echo "Lorem Ipsum" > testdir/A.txt
-
-
-chmod go-rwx testdir
 
 run_command() {
   COMMAND=$1
   FILE_PREFIX=$2
   MODE=$3
   echo "$COMMAND" &> outputs/${FILE_PREFIX}:COMMAND
-  bash -c "$COMMAND" &> outputs/${FILE_PREFIX}:${MODE:=EMPTY}
+  faketime '2030-01-01 08:30:00' bash -c "$COMMAND" &> outputs/${FILE_PREFIX}:${MODE:=EMPTY}
 }
+
+mkdir outputs
+
+mkdir testdir
+chmod go-rwx testdir
+echo "Lorem Ipsum" > testdir/A.txt
 
 for R in "" "r"; do
   for W in "" "w"; do
@@ -28,14 +22,19 @@ for R in "" "r"; do
 
       run_command 'stat testdir' "0_stat_testdir" $MODE
 
-      run_command 'ls -l testdir' "1_ls_l_test_dir_" $MODE
+      run_command 'ls -l testdir' "1_ls_l_test_dir" $MODE
 
       run_command 'cat testdir/A.txt' "2_cat_Atxt" $MODE
 
       run_command 'echo "New file" > testdir/B.txt' "3_echo_Btxt" $MODE
+
+      run_command 'cd testdir' "4_cd" $MODE
     done
   done
 done
+
+chmod u+wx testdir
+rm -rf testdir
 
 # Normalize datetime
 cd outputs
