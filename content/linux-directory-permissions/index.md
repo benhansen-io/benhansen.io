@@ -42,7 +42,70 @@ title = "Linux Directory Permissions"
 
 <span class="read">Read</span>, <span class="write">write</span> and <span class="execute">execute</span> permissions are used for directories as well as files on Linux but their meaning for directories is not as straight forward.
 
-For directories the permission bit meanings are:
+The permissions needed for each action are:
+
+<table class="styled">
+  <thead>
+    <tr>
+      <th>
+        Action
+      </th>
+      <th>
+        Required Permission(s)
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <td>
+      Listing the entries of the directory
+    </td>
+    <td>
+      <span class="read">Read</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Adding or removing entries from the directory
+    </td>
+    <td>
+      <span class="write">Write</span> and <span class="execute">Execute</span> (see also "Restricted Deletion" below)
+    </td>
+  </tr>
+  <tr>
+    <td>
+      "cd" into the directory
+    </td>
+    <td>
+      <span class="execute">Execute</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Accessing the directory entries' contents or entry metadata
+    </td>
+    <td>
+      <span class="execute">Execute</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Modifying the directory entries' contents or entry metadata
+    </td>
+    <td>
+      <span class="execute">Execute</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Remove the directory.
+    </td>
+    <td>
+      As with normal files, the permissions of the parent directory and not the directory itself determine if you can remove it. The directory must be empty.
+    </td>
+  </tr>
+</table>
+
+Or listed inversely each permission allows:
 
 <table class="styled">
   <thead>
@@ -105,89 +168,28 @@ For directories the permission bit meanings are:
   </tr>
 </table>
 
-## Permissions needed for an action
-
-Or listed inversely:
-
-<table class="styled">
-  <thead>
-    <tr>
-      <th>
-        Action
-      </th>
-      <th>
-        Required Permission(s)
-      </th>
-    </tr>
-  </thead>
-  <tr>
-    <td>
-      Listing the entries of the directory
-    </td>
-    <td>
-      <span class="read">Read</span>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      "cd" into the directory
-    </td>
-    <td>
-      <span class="execute">Execute</span>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Adding or removing entries from the directory
-    </td>
-    <td>
-      <span class="write">Write</span> and <span class="execute">Execute</span> (see also "Restricted Deletion" below)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Accessing the directory entries' contents or entry metadata
-    </td>
-    <td>
-      <span class="execute">Execute</span>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Modifying the directory entries' contents or entry metadata
-    </td>
-    <td>
-      <span class="execute">Execute</span>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Remove the directory.
-    </td>
-    <td>
-      As with normal files, the permissions of the parent directory and not the directory itself determine if you can remove it. The directory must be empty.
-    </td>
-  </tr>
-</table>
 
 
 ## Playground
 
-See how the following commands are handled when executed on a directory named `testdir` that starts with a single file named `A.txt` when the executing user has the following permissions:
+See how the following commands are handled when executed on a directory named `testdir` that starts with a single file named `A.txt` when the executing user has the permissions you choose:
 
 <form id="permissions_form">
-  <span class="read">
-    <input type="checkbox" id="read" name="read">
-    <label for="read">Read</label>
-  </span>
-  <span class="write">
-    <input type="checkbox" id="write" name="write">
-    <label for="write">Write</label>
-  </span>
-  <span class="execute">
-    <input type="checkbox" id="execute" name="execute">
-    <label for="execute">Execute</label>
-  </span>
+  <fieldset>
+    <legend>Toggle permissions:</legend>
+    <span class="read">
+      <input type="checkbox" id="read" name="read">
+      <label for="read">Read</label>
+    </span>
+    <span class="write">
+      <input type="checkbox" id="write" name="write">
+      <label for="write">Write</label>
+    </span>
+    <span class="execute">
+      <input type="checkbox" id="execute" name="execute">
+      <label for="execute">Execute</label>
+    </span>
+  </fieldset>
 </form>
 <div class="term command">$ chmod u=<span id="mode"></span> testdir</div>
 
