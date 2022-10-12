@@ -10,13 +10,13 @@ run_command() {
 
 mkdir outputs
 
-mkdir testdir
-chmod go-rwx testdir
-echo "Lorem Ipsum" > testdir/A.txt
 
 for R in "" "r"; do
   for W in "" "w"; do
     for X in "" "x"; do
+      mkdir testdir
+      chmod go-rwx testdir
+      echo "Lorem Ipsum" > testdir/A.txt
       MODE=$R$W$X
       chmod u=${MODE} testdir
 
@@ -29,12 +29,12 @@ for R in "" "r"; do
       run_command 'echo "New file" > testdir/B.txt' "3_echo_Btxt" $MODE
 
       run_command 'cd testdir' "4_cd" $MODE
+      chmod u+rwx testdir
+      rm -rf testdir
     done
   done
 done
 
-chmod u+wx testdir
-rm -rf testdir
 
 # Normalize datetime
 cd outputs

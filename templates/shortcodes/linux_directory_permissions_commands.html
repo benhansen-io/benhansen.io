@@ -6,7 +6,7 @@
   </div>
   <div class='output EMPTY'>File: testdir
   Size: 4096      	Blocks: 8          IO Block: 4096   directory
-Device: 254,0	Inode: 57428602    Links: 2
+Device: 254,0	Inode: 57417470    Links: 2
 Access: (0000/d---------)  Uid: ( 1000/     ben)   Gid: ( 1000/     ben)
 Access: 2030-01-01 08:30:00.000000000 -0000
 Modify: 2030-01-01 08:30:00.000000000 -0000
@@ -14,7 +14,7 @@ Change: 2030-01-01 08:30:00.000000000 -0000
  Birth: 2030-01-01 08:30:00.000000000 -0000</div>
   <div class='output x'>File: testdir
   Size: 4096      	Blocks: 8          IO Block: 4096   directory
-Device: 254,0	Inode: 57428602    Links: 2
+Device: 254,0	Inode: 57417470    Links: 2
 Access: (0100/d--x------)  Uid: ( 1000/     ben)   Gid: ( 1000/     ben)
 Access: 2030-01-01 08:30:00.000000000 -0000
 Modify: 2030-01-01 08:30:00.000000000 -0000
@@ -22,7 +22,7 @@ Change: 2030-01-01 08:30:00.000000000 -0000
  Birth: 2030-01-01 08:30:00.000000000 -0000</div>
   <div class='output w'>File: testdir
   Size: 4096      	Blocks: 8          IO Block: 4096   directory
-Device: 254,0	Inode: 57428602    Links: 2
+Device: 254,0	Inode: 57417470    Links: 2
 Access: (0200/d-w-------)  Uid: ( 1000/     ben)   Gid: ( 1000/     ben)
 Access: 2030-01-01 08:30:00.000000000 -0000
 Modify: 2030-01-01 08:30:00.000000000 -0000
@@ -30,7 +30,7 @@ Change: 2030-01-01 08:30:00.000000000 -0000
  Birth: 2030-01-01 08:30:00.000000000 -0000</div>
   <div class='output wx'>File: testdir
   Size: 4096      	Blocks: 8          IO Block: 4096   directory
-Device: 254,0	Inode: 57428602    Links: 2
+Device: 254,0	Inode: 57417470    Links: 2
 Access: (0300/d-wx------)  Uid: ( 1000/     ben)   Gid: ( 1000/     ben)
 Access: 2030-01-01 08:30:00.000000000 -0000
 Modify: 2030-01-01 08:30:00.000000000 -0000
@@ -38,7 +38,7 @@ Change: 2030-01-01 08:30:00.000000000 -0000
  Birth: 2030-01-01 08:30:00.000000000 -0000</div>
   <div class='output r'>File: testdir
   Size: 4096      	Blocks: 8          IO Block: 4096   directory
-Device: 254,0	Inode: 57428602    Links: 2
+Device: 254,0	Inode: 57417470    Links: 2
 Access: (0400/dr--------)  Uid: ( 1000/     ben)   Gid: ( 1000/     ben)
 Access: 2030-01-01 08:30:00.000000000 -0000
 Modify: 2030-01-01 08:30:00.000000000 -0000
@@ -46,7 +46,7 @@ Change: 2030-01-01 08:30:00.000000000 -0000
  Birth: 2030-01-01 08:30:00.000000000 -0000</div>
   <div class='output rx'>File: testdir
   Size: 4096      	Blocks: 8          IO Block: 4096   directory
-Device: 254,0	Inode: 57428602    Links: 2
+Device: 254,0	Inode: 57417470    Links: 2
 Access: (0500/dr-x------)  Uid: ( 1000/     ben)   Gid: ( 1000/     ben)
 Access: 2030-01-01 08:30:00.000000000 -0000
 Modify: 2030-01-01 08:30:00.000000000 -0000
@@ -54,7 +54,7 @@ Change: 2030-01-01 08:30:00.000000000 -0000
  Birth: 2030-01-01 08:30:00.000000000 -0000</div>
   <div class='output rw'>File: testdir
   Size: 4096      	Blocks: 8          IO Block: 4096   directory
-Device: 254,0	Inode: 57428602    Links: 2
+Device: 254,0	Inode: 57417470    Links: 2
 Access: (0600/drw-------)  Uid: ( 1000/     ben)   Gid: ( 1000/     ben)
 Access: 2030-01-01 08:30:00.000000000 -0000
 Modify: 2030-01-01 08:30:00.000000000 -0000
@@ -62,7 +62,7 @@ Change: 2030-01-01 08:30:00.000000000 -0000
  Birth: 2030-01-01 08:30:00.000000000 -0000</div>
   <div class='output rwx'>File: testdir
   Size: 4096      	Blocks: 8          IO Block: 4096   directory
-Device: 254,0	Inode: 57428602    Links: 2
+Device: 254,0	Inode: 57417470    Links: 2
 Access: (0700/drwx------)  Uid: ( 1000/     ben)   Gid: ( 1000/     ben)
 Access: 2030-01-01 08:30:00.000000000 -0000
 Modify: 2030-01-01 08:30:00.000000000 -0000
@@ -75,15 +75,12 @@ Change: 2030-01-01 08:30:00.000000000 -0000
     $ ls -l testdir
 
   </div>
-  <div class='output rw r'>ls: cannot access 'testdir/B.txt': Permission denied
-ls: cannot access 'testdir/A.txt': Permission denied
+  <div class='output rw r'>ls: cannot access 'testdir/A.txt': Permission denied
 total 0
--????????? ? ? ? ?            ? A.txt
--????????? ? ? ? ?            ? B.txt</div>
+-????????? ? ? ? ?            ? A.txt</div>
   <div class='output w EMPTY x wx'>ls: cannot open directory 'testdir': Permission denied</div>
-  <div class='output rwx rx'>total 8
--rw-r--r-- 1 ben ben 12 Oct 10  2022 A.txt
--rw-r--r-- 1 ben ben  9 Oct 10  2022 B.txt</div>
+  <div class='output rwx rx'>total 4
+-rw-r--r-- 1 ben ben 12 Oct 12  2022 A.txt</div>
 </div>
 
 <div class="term">
@@ -100,8 +97,8 @@ total 0
     $ echo "New file" > testdir/B.txt
 
   </div>
-  <div class='output wx rwx rx'></div>
-  <div class='output x r rw w EMPTY'>bash: line 1: testdir/B.txt: Permission denied</div>
+  <div class='output wx rwx'></div>
+  <div class='output x r rw w rx EMPTY'>bash: line 1: testdir/B.txt: Permission denied</div>
 </div>
 
 <div class="term">
