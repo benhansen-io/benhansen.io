@@ -40,7 +40,7 @@ title = "Linux Directory Permissions"
   }
 </style>
 
-<span class="read">Read</span>, <span class="write">write</span> and <span class="execute">execute</span> permissions are used for directories as well as files on Linux but their meaning for directories is not as straight forward.
+<span class="read">Read</span>, <span class="write">write</span> and <span class="execute">execute</span> permissions are used for directories as well as files on Linux but their meaning for directories is not as straight forward<sup><a href="#ref1">1</a></sup>.
 
 The permissions needed for each action are:
 
@@ -163,7 +163,7 @@ Or listed inversely each permission allows:
       1
     </td>
     <td>
-      Allows accessing and modifying the entry contents and metadata. Also needed to add, delete or remove entries. Also called "Search" for directories<sup><a href="#ref1">1</a></sup>.
+      Allows accessing and modifying the entry contents and metadata. Also needed to add, delete or remove entries. Also called "Search" for directories<sup><a href="#ref2">2</a></sup>.
     </td>
   </tr>
 </table>
@@ -227,17 +227,19 @@ See how the following commands are handled when executed on a directory named `t
 
 * A directory where your user has <span class="execute">execute</span> but not <span class="read">read</span> permissions would allow you to edit or modify files that you can not list with "ls" if you already know their path.
 * A directory where your user has <span class="write">write</span> and <span class="execute">execute</span> but not <span class="read">read</span> would allow you to add new files and modify existing files but not see them.
-* A directory with only <span class="write">write</span> permissions is the same as a directory with no permissions<sup><a href="#ref2">2</a></sup>.
+* A directory with only <span class="write">write</span> permissions is the same as a directory with no permissions<sup><a href="#ref3">3</a></sup>.
 * Most of the time you will always want to set <span class="execute">execute</span> if you are also setting either <span class="read">read</span> or <span class="write">write</span>.
 
 ## More advanced permissions
 
-* Restricted Deletion (also called Sticky Bit) - For directories only lets the file and directory owner move or delete a file inside the directory. 
+* Restricted Deletion (also called Sticky Bit) - For directories only lets the file or directory owner move or delete a file inside the directory.
 * Set Group Identity (setgid) - For directories causes new files to be created with the same group as the directory rather than the group of the process creating the file.
 * Set User Identity (setuid) - Ignored by Linux and most Unix systems.
 
 <hr>
 
-<span id="ref1">1</span>. The <a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod man page</a> is the main source of this page's information.
+<span id="ref1">1</span>. This article is focused on directory permissions. For an intro to Linux permissions in general you can read this <a href="https://www.linuxfoundation.org/blog/blog/classic-sysadmin-understanding-linux-file-permissions">Linux Foundation article</a>, this <a href="https://www.guru99.com/file-permissions.html">article</a>, the <a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod man page</a> or search for more.
 
-<span id="ref2">2</span>. See [this SO question](https://unix.stackexchange.com/a/149291/45680). I like the OPs analogy of "execute" permitting access to inodes.
+<span id="ref2">2</span>. The <a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod man page</a> is the main source of this page's information.
+
+<span id="ref3">3</span>. See [this SO question](https://unix.stackexchange.com/a/149291/45680). I like the OPs analogy of "execute" permitting access to inodes.
