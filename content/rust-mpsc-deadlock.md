@@ -124,7 +124,9 @@ After reviewing the documentation of [try_recv] which says (emphasis mine):
 >
 > This method will **never block** the caller in order to wait for data to become available. Instead, this will always return *immediately* with a possible option of pending data on the channel.
 
-I was confident that the behavior does not match the documentation.  I filed [a Rust issue](https://github.com/rust-lang/rust/issues/112723) on GitHub. It is not normal for the Rust standard library to let me down. The conditions to hit the deadlock are rare and it is being addressed. Thanks to everyone who works on Rust and the standard library. It has been a pleasure to use.
+I was confident that the behavior does not match the documentation.  I filed [a Rust issue](https://github.com/rust-lang/rust/issues/112723) on GitHub. It is not normal for the Rust standard library to let me down. The conditions to hit the deadlock are rare and it is being looked at. Thanks to everyone who works on Rust and the standard library. It has been a pleasure to use.
+
+I can prevent the issue for me by pinning the audio backend task to the other core that the main task does not run on. After doing that I haven't seen a deadlock 🎉.
 
 Thanks for taking the time to read. If your interested in hearing more about the programmable button tablet I am making for kids in Rust check out [10buttons.com](https://www.10buttons.com) and follow along.
 
