@@ -39,6 +39,9 @@ I have been marketing boppo as a “screenless tablet” because I think that be
 A year ago, we started marketing boppo getting ready for a crowdfunding. We collected 10,000 emails and 900 $1 reservations for about $14,000 in ads.
 
  Our project is now live on [Kickstarter]. If what I am working on interests you, we would [love your support][Kickstarter]. If there is anything about this project that you would like to hear more about please [let me know](mailto:ben@boppo.com).
+ <br>
+ <br>
+
 <a href="https://www.kickstarter.com/projects/boppo/boppo-the-screenless-tablet?ref=7dg1xx">
 <img style="border: solid black 1px; width: 100%; max-width: 800px" src="/toy-with-an-sdk/Kickstarter_Screenshot.webp">
 </a>
