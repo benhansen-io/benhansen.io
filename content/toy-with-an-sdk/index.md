@@ -3,16 +3,16 @@ date = 2024-10-03
 title = "A Toy with an SDK"
 +++
 
-Have you noticed how much some kids love to push buttons or flip a light switch on and off? My son loved it so much I built him a button box using an Arduino, 10 mechanical keyboard switches with RGB lights, and a speaker. Here is a video of him learning his colors, the first activity I built for him:
+Have you noticed how much some kids love to push buttons or flip a light switch on and off? My son loved it so much I built him a button box using an Arduino, 10 mechanical keyboard switches with RGB lights, and a speaker. Here is a video of him learning his colors, the first activity I built for him.
 
-<iframe style="float: left; margin: 10px" width="315" height="560"
+<iframe style="float: left; margin: 10px; max-width: 315px; width: 100%; height: 560px"
 src="https://www.youtube.com/embed/MyZ18ibgZGk"
 title="YouTube video player"
 frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen></iframe>
 
-A family friend, unaware of the device, commented on how many colors our son knew and how rare that is for a 1-year-old. After taking a break during a move and COVID, I kept building new activities (also called apps) for him and my nephews. As a software developer, it was fun having a new platform to program.
+A family friend, unaware of the device, commented on how many colors our son knew and how rare that is for a 1-year-old. After taking a break during a move and COVID, I kept building new activities (also called apps) for him and my nephews.
 
 I wrote an activity where it just counts how many buttons have been pressed, says the number and color codes the digits like a resistor’s color bands. Super simple. It took less than 30 minutes to code up with the libraries I developed, but I was surprised how much kids liked it. I then made a variant of the app that displays the number on the buttons in binary digits instead of decimal and then watched as my 7 year old nephew learned binary. I don’t think it would be worth making a dedicated toy for either of those activities, but a toy with an SDK and maybe over a hundred apps targeted to different stages of a child's growth? That's what's kept me so excited about this idea for so long.
 
