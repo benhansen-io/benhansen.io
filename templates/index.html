@@ -14,8 +14,9 @@ a {
   padding-right: .3ch;
   vertical-align: text-top;
 }
-ul {
+ul.no-bullets {
   list-style-type: none;
+  padding-left: 20px;
 }
 </style>
 <h1>Ben Hansen</h1>
@@ -29,7 +30,7 @@ ul {
 
 <h2>Contact</h2>
 
-<ul>
+<ul class="no-bullets">
   <li>
   <!-- icons from https://feathericons.com/ MIT licensed -->
   <a href="mailto:web@benhansen.io">
@@ -65,6 +66,9 @@ ul {
 
 <h2>Posts</h2>
 <ul>
+  <li>
+    <a href="/toy-with-an-sdk">2024-10-03: A Toy with an SDK</a>
+  </li>
   <li>
     <a href="/rust-mpsc-deadlock">2023-06-20: Debugging a Rust MPSC Channel Deadlock</a>
   </li>
