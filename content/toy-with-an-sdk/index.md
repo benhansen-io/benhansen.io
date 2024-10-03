@@ -1,6 +1,6 @@
 +++
 date = 2024-10-03
-title = "A Toy with an SDK"
+title = "5 Years Making a Toy with an SDK"
 +++
 
 Have you noticed how much some kids love to push buttons or flip a light switch on and off? My son loved it so much I built him a button box using an Arduino, 10 mechanical keyboard switches with RGB lights, and a speaker. Here is a video of him learning his colors, the first activity I built for him.
@@ -36,8 +36,9 @@ I have been marketing boppo as a “screenless tablet” because I think that be
 * Flipper Zero but for kids and learning not security hacking
 * Stream Deck without the LCD but with a battery and Wifi
 
- Our project is on [Kickstarter]. If what I am working on interests you, we would [love your support][Kickstarter].
+A year ago, we started marketing boppo getting ready for a crowdfunding. We collected 10,000 emails and 900 $1 reservations for about $14,000 in ads.
 
+ Our project is now live on [Kickstarter]. If what I am working on interests you, we would [love your support][Kickstarter]. If there is anything about this project that you would like to hear more about please [let me know](mailto:ben@boppo.com).
 <a href="https://www.kickstarter.com/projects/boppo/boppo-the-screenless-tablet?ref=7dg1xx">
 <img style="border: solid black 1px; width: 100%; max-width: 800px" src="/toy-with-an-sdk/Kickstarter_Screenshot.webp">
 </a>
