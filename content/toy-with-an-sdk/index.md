@@ -36,7 +36,7 @@ I have been marketing boppo as a “screenless tablet” because I think that be
 * Flipper Zero but for kids and learning not security hacking
 * Stream Deck without the LCD but with a battery and Wifi
 
-A year ago, we started marketing boppo getting ready for a crowdfunding. We collected 10,000 emails and 900 $1 reservations for about $14,000 in ads.
+A year ago, we started marketing boppo getting ready for a crowdfunding campaign. We collected 10,000 emails and 900 $1 reservations for about $14,000 in ads.
 
  Our project is now live on [Kickstarter]. If what I am working on interests you, we would [love your support][Kickstarter]. If there is anything about this project that you would like to hear more about please [let me know](mailto:ben@boppo.com).
  <br>
