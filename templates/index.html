@@ -19,13 +19,18 @@ ul.no-bullets {
   padding-left: 20px;
 }
 </style>
+<!-- For Brevo form -->
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
 <h1>Ben Hansen</h1>
+
+<div id="message"></div>
 
 <h2>Current Projects</h2>
 
 <ul>
-  <li><a href="https://boppo.com">boppo - screenless tablet</a></li>
-  <li><a href="https://www.pinging.net">pinging.net</a></li>
+  <li><a href="https://boppo.com">boppo - screenless tablet for kids' learning and fun</a></li>
+  <li><a href="https://www.pinging.net">pinging.net - monitor your internet connection</a></li>
 </ul>
 
 <h2>Contact</h2>
@@ -74,7 +79,11 @@ ul.no-bullets {
   </li>
 </ul>
 
-<h2>Posts</h2>
+<h2>Posts
+  <a href="/rss.xml">
+    <img class="icon" src="/icons/rss.svg">
+  </a>
+</h2>
 <ul>
   <li>
     <a href="/toy-with-an-sdk">2024-10-03: 5 Years Making a Toy with an SDK</a>
@@ -84,4 +93,46 @@ ul.no-bullets {
   </li>
 </ul>
 
+<form id="sib-form" method="POST" action="https://15552814.sibforms.com/serve/MUIFAOOeoeaYQ_wmvFYvGYOV8lfvnL4GyT0_NvmNDEcNUjvB2mYX3cboAr-_SQTATIr9yYXCRYQIFNjHcwuorG_zrB1irF8DO5z-hmBr_b5g-HwQhICJJqKluRegk92RmO7bqwA6O0yQ_-yQU8UfbV20H30rev1Ms1wGXt6WVt6A9rYVEHKN3UDvKn95-xuFqvxWuj6oAoSNlley">
+  <div style="padding: 8px 0;">
+    <div class="sib-input sib-form-block">
+      <div class="form__entry entry_block">
+        <div class="form__label-row ">
+          <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; color:#3c4858;" for="EMAIL" data-required="*">Enter your email address to subscribe to new posts</label>
+
+          <div class="entry__field">
+            <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
+          </div>
+        </div>
+
+        <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+        </label>
+      </div>
+    </div>
+  </div>
+  <div style="padding: 8px 0;">
+    <div class="sib-form-block" style="text-align: left">
+      <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:left; font-weight:700; color:#FFFFFF; background-color:#3E4857; border-radius:3px; border-width:0px;" form="sib-form" type="submit">
+        SUBSCRIBE
+      </button>
+    </div>
+  </div>
+  <input type="text" name="email_address_check" value="" class="input--hidden">
+  <input type="hidden" name="locale" value="en">
+  <input type="hidden" name="html_type" value="simple">
+</form>
+
+<script>
+  // Function to check if URL contains ?subscribed query parameter
+  document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const messageField = document.getElementById("message");
+    if (urlParams.has("subscribed")) {
+      messageField.textContent = "Please check your email to confirm your subscription.";
+    }
+    if (urlParams.has("confirmed")) {
+      messageField.textContent = "You are confirmed. Thank you for subscribing.";
+    }
+  });
+</script>
 {% endblock content %}
