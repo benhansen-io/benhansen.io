@@ -238,7 +238,7 @@ See how the following commands are handled when executed on a directory named `t
 
 <hr>
 
-<span id="ref1">1</span>. This article is focused on directory permissions. For an intro to Linux permissions in general you can read this <a href="https://www.linuxfoundation.org/blog/blog/classic-sysadmin-understanding-linux-file-permissions">Linux Foundation article</a>, this <a href="https://www.guru99.com/file-permissions.html">article</a>, the <a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod man page</a> or search for more.
+<span id="ref1">1</span>. This article is focused on directory permissions. For an intro to Linux permissions in general you can read this <a href="https://www.linuxfoundation.org/blog/blog/classic-sysadmin-understanding-linux-file-permissions">Linux Foundation article</a>, the <a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod man page</a> or search for more.
 
 <span id="ref2">2</span>. The <a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod man page</a> is the main source of this page's information.
 
